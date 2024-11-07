@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Jacques+Francois&display=swap');
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #8E7653;
+    font-size: 70px;
+    font-family: "Imperial Script", cursive;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: #8E7653;
+    text-decoration: none;
+    font-family: "Jacques Francois", serif;
+    font-size: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    width: 150px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.search-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .search-container {
+        display: none; /* Hide search bar on mobile */
+    }
+}
+
+.gift img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.container {  
+    margin-top: 70px;
+    display: flex;  
+    flex-direction: row;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 20px;  
+    background-color: #fff;  
+}  
+    
+.left-column {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: space-between;  
+    align-items: center;  
+    width: 50%;  
+}  
+    
+.valentines-box, .graduation-box {  
+    width: 100%;  
+    height: 500px;  
+    margin-bottom: 30px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+    
+.valentines-box img, .graduation-box img {  
+    width: 100%; 
+    max-width: 500px; 
+    height: 100%;  
+    max-height: 500px ;
+    object-fit: cover;  
+}  
+    
+.right-column {  
+    width: 50%;  
+    padding: 20px; 
+    margin-top: 0; 
+}  
+    
+.text-block {  
+    background-color: #952929;  
+    padding: 20px;  
+    color: #fff;  
+    font-size: 25px;  
+    font-family: "Jacques Francois", serif;  
+    text-align: center;
+}  
+    
+.valentines-text, .graduation-text {  
+    margin-bottom: 20px; 
+    padding: 0 50px 0 50px; 
+}
+  
+hr {  
+    border: none;  
+    border-top: 1px solid #fff;  
+    margin: 20px auto;  
+    width: 75%;
+}
+  

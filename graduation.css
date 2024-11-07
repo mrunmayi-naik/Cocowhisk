@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Jacques+Francois&display=swap');
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #8E7653;
+    font-size: 70px;
+    font-family: "Imperial Script", cursive;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: #8E7653;
+    text-decoration: none;
+    font-family: "Jacques Francois", serif;
+    font-size: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    width: 150px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.search-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+}
+
+/* .grad{
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+   
+}
+
+.grad-image{
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    margin-left: 80px;
+}
+
+.grad1{
+    width: 500px;
+    height: 700px;
+    padding: 50px;
+}
+
+.grad2{
+    width: 500px;
+    padding: 50px;
+    height: 700px;
+} */
+
+.grad {
+    width: 100%;
+    display: flex;                /* Enable flexbox */
+    align-items: center;         /* Center items vertically */
+    justify-content: center;     /* Center items horizontally */
+    margin: auto 0;              /* Center the grad container itself */
+}
+
+.grad-image {
+    display: flex;               /* Enable flexbox for grad images */
+    justify-content: center;     /* Center the images horizontally */
+    gap: 20px;                  /* Optional: space between images */
+    overflow: hidden;           /* Hide overflow if needed */
+}
+
+.grad1, .grad2 {
+    display: flex;               /* Enable flexbox for image containers */
+    justify-content: center;     /* Center the image within the container */
+    align-items: center;         /* Center the image vertically */
+    width: 700px;
+    height: 700px;
+    box-sizing: border-box;
+}
+             
+
+.grad1 img, .grad2 img {
+    max-width: 100%; 
+    width: 700px;           /* Make images responsive */
+    height: 600px;
+    object-fit: cover;          /* Cover the container while maintaining aspect ratio */
+    padding: 30px 50px 30px 50px; 
+}
+
+.grad-text{
+    padding: 40px 80px 40px 80px;
+    color: #8E7653;
+    font-family: "Jacques Francois", serif;
+    font-size: 23px;
+    text-align: center;
+}

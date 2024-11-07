@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
+footer {   
+    padding: 20px;  
+    align-items: center;
+    text-align: center;
+   
+   
+}  
+    
+.footer-content {  
+    width: 100%; /* Adjust the width as needed */ 
+    max-width: 1000px; 
+    margin: 0 auto;  
+    padding: 40px 40px 40px 40px;  
+    display: flex;  
+    align-items: center;
+    justify-content: space-around;
+    /* margin-left: 40px; */
+}  
+    
+.footer-content p {  
+    font-family: "Imperial Script", cursive;
+    font-size: 80px; 
+    font-weight: 100; 
+    margin-bottom: 10px;
+    margin-right: 60px;  
+    color: #8E7653;
+}  
+    
+.footer-content ul {  
+    list-style: none;  
+    margin: 0;  
+    padding: 0;  
+
+}  
+    
+.footer-content li {  
+    display: flex; 
+    flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   margin: 25px 20px 25px 20px;
+   
+}  
+    
+.footer-content a {  
+    color: #8E7653;  
+    text-decoration: none;  
+}  
+    
+.footer-content a:hover {  
+    color: #cccccc; /* Light gray text color on hover */  
+}  
+    
+.social-media {  
+    margin-top: 20px;  
+   
+}  
+
+.social-media h1{
+    color: #8E7653;
+}
+.social-media a {  
+    margin: 10px; 
+   
+}  
+    
+.social-media a img {  
+    width: 22px; /* Adjust the social media icon width as needed */  
+    height: 23px;  
+}
+
+
+hr {  
+    border: none;  
+    border-top: 2px solid #8E7653;  
+    margin: 20px auto;  
+    width: 85%;
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-around;
+    color: #8E7653;
+    margin-bottom: 0;
+}
+  

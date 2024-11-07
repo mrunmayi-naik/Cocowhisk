@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Jacques+Francois&display=swap');
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #8E7653;
+    font-size: 70px;
+    font-family: "Imperial Script", cursive;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: #8E7653;
+    text-decoration: none;
+    font-family: "Jacques Francois", serif;
+    font-size: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    width: 150px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.search-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .search-container {
+        display: none; /* Hide search bar on mobile */
+    }
+}
+
+.our-story{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px 0 0;
+    margin-top: 30px;
+  
+}
+
+.story-text {
+   /* Allow text to take available space */
+    margin-left: 50px; /* Space between text and image */
+    padding: 40px 40px 40px 50px;
+    text-align: center;
+    color: #fff;
+    background:#952929;
+}
+
+.story-text h1{
+    font-family: "Imperial Script", cursive;
+    font-size: 65px;
+    font-weight: 100;
+}
+
+.story-text p{
+    font-family: "Jacques Francois", serif;
+    font-size: 23px;
+    margin-bottom: 50px;
+}
+
+.story-image{
+    width: 1500px;
+    height: 700px;
+    overflow: hidden;
+    /* padding: 100px 0 100px 0; */
+}
+
+.our-story:hover .story-image{
+    animation:  fadeIn 2s;
+}
+@keyframes fadeIn { 
+    from { 
+      opacity: 0; 
+    } 
+   
+    to { 
+      opacity: 1; 
+    } 
+} 
+
+.our-ethos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0 0 40px;
+    margin-top: 30px;
+}
+
+.ethos-text{
+    margin-right: 50px; /* Space between text and image */
+    padding: 40px 40px 40px 50px;
+    text-align: center;
+    color: #fff;
+    background:#952929;
+}
+
+.ethos-text h1{
+    font-family: "Imperial Script", cursive;
+    font-size: 65px;
+    font-weight: 100;
+}
+
+.ethos-text p{
+    font-family: "Jacques Francois", serif;
+    font-size: 23px;
+    margin-bottom: 50px;
+}
+
+.ethos-image{
+    width: 1800px;
+    height: 700px;
+    overflow: hidden;
+   
+}
+
+.our-ethos:hover .ethos-image{
+    animation:  fadeIn 2s;
+}
