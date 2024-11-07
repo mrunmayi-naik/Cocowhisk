@@ -46,3 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(backgroundSection); // Start observing the background section
 });
 
+function toggleMenu() {
+  document.querySelector('.navbar').classList.toggle('active');
+}

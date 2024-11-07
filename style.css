@@ -4,11 +4,13 @@ body {
     margin: 0;
 }
 
+/* General styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -16,6 +18,7 @@ body {
     font-size: 70px;
     font-family: "Imperial Script", cursive;
     padding-left: 20px;
+    flex-grow: 1;
 }
 
 .nav-links {
@@ -41,111 +44,202 @@ body {
     border: none;
     border-radius: 5px;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
     width: 150px;
 }
 
 .search-button {
     background-color: transparent;
     border: none;
-    color: white;
     cursor: pointer;
     margin-left: 5px;
-    font-size: 18px;
 }
 
 .search-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
+    width: 20px;
+    height: 20px;
 }
 
-.hamburger {
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 50px; /* Smaller font size for mobile */
+        padding-left: 0;
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
+    }
+
+    .search-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%; /* Full-width on smaller screens */
+        font-size: 16px;
+    }
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
     display: none;
-    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
     cursor: pointer;
+    color: #8E7653;
 }
 
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 4px 0;
+/* Show toggle button on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 10px; /* Adjust this value as needed */
+    }
+
+    .navbar {
+        position: relative;
+    }
 }
+
 
 
 
 .hero {
-    padding: 10px 0 10px 10px;
+    padding: 10px 0;
     display: flex;
-    padding-top:30px;
+    padding-top: 30px;
     position: relative;
-    z-index: 100;  
+    z-index: 100;
+    justify-content: center; /* Center elements horizontally */
+    gap: 20px; /* Space between image and text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .hero-image {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    margin-left: 70px;
-}
-.hero-image img {
-    width: 600px;
-    height: 550px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0; /* Remove any default margin */
 }
 
-.hero-txt p{
-    padding: 10px 10px;
-    margin-top: 10px;
-    font-size: 50px;
-    font-family: "Imperial Script", cursive;
-    color: #ffff;
-    text-align:  center;   
+.hero-image img {
+    width: 100%; /* Full width for responsive scaling */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .hero-txt {
-    width: 640px;
-    height: 450px;
+    max-width: 600px;
     font-size: 48px;
-    color: #ffff;
-    transform: rotate(-06deg); /* Tilt the text by -10 degrees */
+    font-family: "Imperial Script", cursive;
+    color: #fff;
+    transform: rotate(-6deg);
     background-color: #952929;
     padding: 60px;
     position: relative;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8); /* Adds a shadow */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8);
+    text-align: center;
 }
 
+/* Pin Icon Styling */
 .pin-icon {
     position: absolute;
-    top: -30px; /* Adjust as needed */
-    right: -10px; /* Adjust as needed */
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
+    top: -20px;
+    right: -10px;
+    width: 80px;
+    height: 80px;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 0; /* Remove extra padding on small screens */
+        gap: 10px; /* Reduce gap for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .hero-image img {
+        max-width: 400px; /* Limit image size */
+    }
+
+    .hero-txt {
+        font-size: 32px;
+        padding: 40px;
+    }
+
+    .pin-icon {
+        width: 40px;
+        height: 40px;
+        top: -15px;
+        right: -5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image img {
+        max-width: 300px;
+    }
+
+    .hero-txt {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .pin-icon {
+        width: 30px;
+        height: 30px;
+        top: -10px;
+        right: -2px;
+    }
+}
+
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns on larger screens */
+    gap: 30px 50px; /* Increased gap between images */
     max-width: 1000px;
     margin: auto;
     padding: 30px;
 }
+
 .box {
     margin-top: 30px;
     text-align: center;
     overflow: hidden;
 }
+
 .box img {
     max-width: 100%;
     width: 400px;
-    height: 350px;
+    height: 300px; /* Default image height */
     transition: transform 0.3s ease-in-out;
-    object-fit: cover;
+    object-fit: cover; /* Ensures images cover the box without distortion */
 }
 
-.box img:hover{
-    transform: scale(1.2); /* Zoom in effect on image hover */
+.box img:hover {
+    transform: scale(1.2); /* Zoom-in effect on image hover */
 }
+
 .title {
     text-align: center;
     margin-bottom: 20px;
@@ -154,6 +248,41 @@ body {
     font-family: "Jacques Francois", serif;
     color: #952929;
 }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
+        gap: 30px 40px; /* Increase gap between images on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .box img {
+        height: 250px; /* Decrease height on smaller screens */
+    }
+
+    .container {
+        gap: 20px 30px; /* Increase gap between images on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on small screens */
+        gap: 15px 15px; /* Reduce gap between columns on small screens */
+    }
+
+    .box img {
+        height: 200px; /* Decrease height even further on very small screens */
+    }
+
+    .title {
+        font-size: 32px; /* Adjust title font size for small screens */
+    }
+}
+
+
 
 
 
