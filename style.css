@@ -65,6 +65,7 @@ body {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+       
     }
 
     .logo {
@@ -77,6 +78,12 @@ body {
         flex-direction: column;
         gap: 10px;
         width: 100%;
+        background-color: white; /* Slight background on nav-links to make it readable */
+        position: absolute;
+        top: 100%; /* Position it right below the logo/menu button */
+        left: 0;
+        z-index: 101;
+        font-size: 15px;
     }
 
     .navbar.active .nav-links {
@@ -196,18 +203,18 @@ body {
 
 @media (max-width: 480px) {
     .hero-image img {
-        max-width: 300px;
+        max-width: 290px;
     }
 
     .hero-txt {
-        max-width: 300px;
+        max-width: 280px;
         font-size: 20px;
         padding: 20px;
     }
 
     .pin-icon {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         top: -10px;
         right: -2px;
     }
@@ -254,7 +261,7 @@ body {
 @media (max-width: 992px) {
     .container {
         grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
-        gap: 30px 40px; /* Increase gap between images on medium screens */
+        gap: 30px 30px; /* Increase gap between images on medium screens */
     }
 }
 
@@ -264,7 +271,12 @@ body {
     }
 
     .container {
-        gap: 20px 30px; /* Increase gap between images on small screens */
+        gap: 20px 20px; /* Increase gap between images on small screens */
+        margin-top: 0;
+    }
+    
+    .title{
+        margin-bottom: 0;
     }
 }
 
@@ -311,9 +323,6 @@ body {
     
 }
 
-
-
-
 .product-1 {
     position: absolute; /* Position on top of the background */
     top: 130px; /* Adjust as needed */
@@ -339,6 +348,69 @@ body {
     font-family: "Imperial Script", cursive;
     font-size: 60px;
     font-weight: 100;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .special-offer {
+        height: 600px;
+    }
+
+    .top-title, .bottom-title {
+        font-size: 50px;
+    }
+
+    .product-1 {
+        top: 100px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .special-offer {
+        height: 500px;
+    }
+
+    .top-title, .bottom-title {
+        font-size: 40px;
+    }
+
+    .top-title {
+        margin-bottom: 100px;
+    }
+
+    .bottom-title {
+        margin-top: 200px;
+    }
+
+    .product-1 {
+        top: 80px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .special-offer {
+        height: 400px;
+        margin-top: 30px;
+    }
+
+    .top-title, .bottom-title {
+        font-size: 30px;
+    }
+
+    .top-title {
+        margin-bottom: 150px;
+    }
+
+    .bottom-title {
+        margin-top: 130px;
+    }
+
+    .product-1 {
+        top: 80px;
+        height: 250px;
+    }
 }
 
 .our-ethos{
@@ -390,6 +462,74 @@ body {
 .read-more:hover {
     background-color: #c16565; /* Darker color on hover */
     border: 2px solid #952929;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .our-ethos {
+        padding: 50px;
+    }
+
+    .ethos-text h1 {
+        font-size: 50px;
+    }
+
+    .ethos-text p {
+        font-size: 24px;
+    }
+
+    .ethos-image {
+        max-width: 400px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-ethos {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        margin-top: 0;
+    }
+
+    .ethos-text {
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .ethos-text h1 {
+        font-size: 45px;
+    }
+
+    .ethos-text p {
+        font-size: 22px;
+    }
+
+    .ethos-image {
+        max-width: 350px;
+        height: 400px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ethos-text h1 {
+        font-size: 40px;
+    }
+
+    .ethos-text p {
+        font-size: 18px;
+    }
+
+    .read-more {
+        padding: 12px 16px;
+        font-size: 18px;
+    }
+
+    .ethos-image {
+        max-width: 300px;
+        height: auto;
+    }
 }
 
 .our-story{
@@ -448,6 +588,72 @@ body {
     border: 2px solid #b25757;
 }
 
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .our-story {
+        padding: 60px;
+    }
+
+    .story-text h1 {
+        font-size: 50px;
+    }
+
+    .story-text p {
+        font-size: 22px;
+    }
+
+    .story-image {
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-story {
+        flex-direction: column;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .story-text {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .story-text h1 {
+        font-size: 45px;
+    }
+
+    .story-text p {
+        font-size: 20px;
+    }
+
+    .story-image {
+        width: 300px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-text h1 {
+        font-size: 40px;
+    }
+
+    .story-text p {
+        font-size: 18px;
+    }
+
+    .read-more2 {
+        padding: 12px 16px;
+        font-size: 18px;
+    }
+
+    .story-image {
+        width: 250px;
+        height: auto;
+    }
+}
+
+
 .graduation-gift{
     justify-content: center;
     text-align: center;
@@ -476,6 +682,46 @@ body {
 
 .grad-link{
     text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .graduation-gift {
+        margin-top: 80px;
+    }
+
+    .graduation-gift h1 {
+        font-size: 60px; /* Smaller font for medium screens */
+    }
+
+    .grad-image {
+        max-width: 500px; /* Reduce max width for the image */
+    }
+}
+
+@media (max-width: 768px) {
+    .graduation-gift {
+        margin-top: 60px;
+    }
+
+    .graduation-gift h1 {
+        font-size: 50px; /* Smaller font for smaller screens */
+    }
+
+    .grad-image {
+        max-width: 400px; /* Further reduce image width */
+    }
+}
+
+@media (max-width: 480px) {
+    .graduation-gift h1 {
+        font-size: 37px; /* Further reduce font size for very small screens */
+    }
+
+    .grad-image {
+        max-width: 400px; /* Reduce image size on very small screens */
+        margin-top: 20px; /* Adjust spacing */
+    }
 }
 
 .review-section {
@@ -531,4 +777,37 @@ body {
     color: #333;
     max-width: 400px;
 }
+  
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .review-title {
+      font-size: 3rem;
+    }
+  
+    .reviews-slider {
+      padding: 10px;
+      gap: 15px; /* Space between cards */
+    }
+  
+    .review-card {
+      width: 90%; /* Full-width cards on smaller screens */
+      max-width: 300px; /* Set a max-width to limit card width */
+      height: auto; /* Allow flexible height */
+      margin: 0 auto; /* Center cards */
+      padding: 15px;
+      background-color: #ad9a7d;
+    }
+  
+    .reviewer-name {
+      font-size: 1.2rem;
+      margin-left: 10px;
+    }
+  
+    .review-text {
+      font-size: 1rem;
+      width: 100%; /* Full width inside card */
+      white-space: normal; /* Allows text to wrap to multiple lines */
+      line-height: 1.5; /* Adds space between lines for readability */
+    }
+  }
   

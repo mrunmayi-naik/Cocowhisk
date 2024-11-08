@@ -5,27 +5,27 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-const slider = document.querySelector('.reviews-slider');
-let scrollAmount = 0;
-let scrollMax = slider.scrollWidth - slider.clientWidth; // Maximum scrollable width
+// const slider = document.querySelector('.reviews-slider');
+// let scrollAmount = 0;
+// let scrollMax = slider.scrollWidth - slider.clientWidth; // Maximum scrollable width
 
-function autoSlide() {
-  // Scroll 300px to the right every 2 seconds
-  scrollAmount += 300;
+// function autoSlide() {
+//   // Scroll 300px to the right every 2 seconds
+//   scrollAmount += 300;
   
-  // If the scroll reaches the end, reset to the beginning
-  if (scrollAmount >= scrollMax) {
-    scrollAmount = 0;
-  }
+//   // If the scroll reaches the end, reset to the beginning
+//   if (scrollAmount >= scrollMax) {
+//     scrollAmount = 0;
+//   }
   
-  slider.scrollTo({
-    left: scrollAmount,
-    behavior: 'smooth'
-  });
-}
+//   slider.scrollTo({
+//     left: scrollAmount,
+//     behavior: 'smooth'
+//   });
+// }
 
 // Auto slide every 2 seconds
-setInterval(autoSlide, 2000);
+// setInterval(autoSlide, 2000);
 
 
 
