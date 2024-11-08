@@ -19,6 +19,12 @@ body {
     font-family: "Imperial Script", cursive;
     padding-left: 20px;
     flex-grow: 1;
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #952929;  /* Change color on hover */
 }
 
 .nav-links {

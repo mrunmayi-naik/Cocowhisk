@@ -4,11 +4,13 @@ body {
     margin: 0;
 }
 
+/* General styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -16,7 +18,13 @@ body {
     font-size: 70px;
     font-family: "Imperial Script", cursive;
     padding-left: 20px;
+    flex-grow: 1;
     text-decoration: none;
+}
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #952929;  /* Change color on hover */
 }
 
 .nav-links {
@@ -42,58 +50,85 @@ body {
     border: none;
     border-radius: 5px;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
     width: 150px;
 }
 
 .search-button {
     background-color: transparent;
     border: none;
-    color: white;
     cursor: pointer;
     margin-left: 5px;
-    font-size: 18px;
 }
 
 .search-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
+    width: 20px;
+    height: 20px;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 4px 0;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .navbar {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #333;
+        align-items: flex-start;
+       
+    }
+
+    .logo {
+        font-size: 50px; /* Smaller font size for mobile */
+        padding-left: 0;
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
         width: 100%;
+        background-color: white; /* Slight background on nav-links to make it readable */
+        position: absolute;
+        top: 100%; /* Position it right below the logo/menu button */
+        left: 0;
+        z-index: 101;
+        font-size: 15px;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
     }
 
     .search-container {
-        display: none; /* Hide search bar on mobile */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%; /* Full-width on smaller screens */
+        font-size: 16px;
+    }
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #8E7653;
+}
+
+/* Show toggle button on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 10px; /* Adjust this value as needed */
+    }
+
+    .navbar {
+        position: relative;
     }
 }
 
@@ -102,6 +137,7 @@ body {
     height: 600px;
     object-fit: cover;
 }
+
 .container {  
     margin-top: 70px;
     display: flex;  
@@ -164,3 +200,91 @@ hr {
     width: 75%;
 }
   
+/* Media queries for responsiveness */
+
+    /* For tablets and smaller screens */
+    @media (max-width: 1024px) {
+        .container {
+            padding: 20px;
+            flex-direction: column; /* Stack items vertically on smaller screens */
+        }
+
+        .left-column, .right-column {
+            width: 100%;
+            margin-bottom: 20px; /* Add spacing between columns */
+        }
+
+        .text-block {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .valentines-text, .graduation-text {
+            font-size: 18px;
+            padding: 0 30px;
+        }
+
+        .valentines-box, .graduation-box {
+            height: 400px;
+        }
+
+        .valentines-box img, .graduation-box img {
+            max-height: 400px;
+        }
+    }
+
+    /* For mobile devices */
+    @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+            flex-direction: column; /* Stack items vertically */
+        }
+
+        .left-column, .right-column {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .text-block {
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .valentines-text, .graduation-text {
+            font-size: 16px;
+            padding: 0 20px;
+        }
+
+        .valentines-box, .graduation-box {
+            height: 300px;
+        }
+
+        .valentines-box img, .graduation-box img {
+            max-height: 300px;
+        }
+    }
+
+    /* For extra small mobile screens */
+    @media (max-width: 480px) {
+        .container {
+            padding: 5px;
+        }
+
+        .text-block {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .valentines-text, .graduation-text {
+            font-size: 14px;
+            padding: 0 15px;
+        }
+
+        .valentines-box, .graduation-box {
+            height: 250px;
+        }
+
+        .valentines-box img, .graduation-box img {
+            max-height: 250px;
+        }
+    }

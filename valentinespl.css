@@ -6,11 +6,13 @@ body {
     margin: 0;
 }
 
+/* General styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -18,7 +20,13 @@ body {
     font-size: 70px;
     font-family: "Imperial Script", cursive;
     padding-left: 20px;
-    text-decoration: none;
+    flex-grow: 1;
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #952929;  /* Change color on hover */
 }
 
 .nav-links {
@@ -44,63 +52,85 @@ body {
     border: none;
     border-radius: 5px;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
     width: 150px;
 }
 
 .search-button {
     background-color: transparent;
     border: none;
-    color: white;
     cursor: pointer;
     margin-left: 5px;
-    font-size: 18px;
 }
 
 .search-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
+    width: 20px;
+    height: 20px;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 4px 0;
-}
-
-/* Mobile Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .navbar {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        width: 100%;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
+        align-items: flex-start;
+       
     }
 
     .logo {
-        font-size: 40px; /* Adjust logo size for mobile */
+        font-size: 50px; /* Smaller font size for mobile */
+        padding-left: 0;
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: white; /* Slight background on nav-links to make it readable */
+        position: absolute;
+        top: 100%; /* Position it right below the logo/menu button */
+        left: 0;
+        z-index: 101;
+        font-size: 15px;
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
     }
 
     .search-container {
-        display: none; /* Hide search bar on mobile */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%; /* Full-width on smaller screens */
+        font-size: 16px;
+    }
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #8E7653;
+}
+
+/* Show toggle button on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 10px; /* Adjust this value as needed */
+    }
+
+    .navbar {
+        position: relative;
     }
 }
 
@@ -180,4 +210,110 @@ body {
     width: 600px;
     height: 500px;
     padding: 0 90px 0 90px;
+}
+
+/* Responsive Design for Tablets and Smaller Screens */
+
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+    .special1 {
+        flex-direction: column; /* Stack text and image vertically */
+        margin-top: 100px;
+        width: 90%; /* Make the section width smaller */
+    }
+
+    .vibrant-text h1 {
+        font-size: 50px; /* Smaller font size for tablets */
+    }
+
+    .vibrant-text p {
+        font-size: 20px; /* Smaller font size for tablets */
+    }
+
+    .vibrant-image {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Adjust image height automatically */
+    }
+
+    .special2 {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+    }
+
+    .vibrantinfo-image {
+        max-width: 100%; /* Make image take up full container */
+        margin: 20px 0;
+    }
+
+    .vibrantinfo-text p {
+        font-size: 18px; /* Adjust text size for mobile */
+        padding: 0 20px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .special1 {
+        margin-top: 60px; /* Smaller margin for mobile */
+    }
+
+    .vibrant-text h1 {
+        font-size: 40px; /* Even smaller font size for mobile */
+    }
+
+    .vibrant-text p {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .vibrant-image {
+        width: 100%; /* Make image full-width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .special2 {
+        margin-top: 60px;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+    }
+
+    .vibrantinfo-text {
+        padding: 20px;
+        text-align: center;
+        height: auto; /* Allow content to scale vertically */
+    }
+
+    .vibrantinfo-image {
+        width: 100%;
+        max-width: 100%; /* Take up full width */
+        height: auto; /* Maintain aspect ratio */
+        margin: 20px 0;
+    }
+
+    .vibrantinfo-text p {
+        font-size: 16px; /* Smaller text for smaller screens */
+        padding: 0 20px;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .vibrant-text h1 {
+        font-size: 30px; /* Further reduce header size */
+    }
+
+    .vibrant-text p {
+        font-size: 16px; /* Even smaller font size for small screens */
+    }
+
+    .vibrantinfo-image {
+        width: 100%;
+        height: auto;
+        margin: 10px 0; /* Reduce margins on small screens */
+        object-fit: cover;
+    }
+
+    .vibrantinfo-text p {
+        font-size: 14px; /* Smallest text for small mobile screens */
+        padding: 0 10px;
+    }
 }

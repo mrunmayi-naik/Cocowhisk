@@ -4,11 +4,13 @@ body {
     margin: 0;
 }
 
+/* General styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -16,7 +18,13 @@ body {
     font-size: 70px;
     font-family: "Imperial Script", cursive;
     padding-left: 20px;
-    text-decoration: none;
+    flex-grow: 1;
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #952929;  /* Change color on hover */
 }
 
 .nav-links {
@@ -42,35 +50,86 @@ body {
     border: none;
     border-radius: 5px;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
     width: 150px;
 }
 
 .search-button {
     background-color: transparent;
     border: none;
-    color: white;
     cursor: pointer;
     margin-left: 5px;
-    font-size: 18px;
 }
 
 .search-icon {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
+    width: 20px;
+    height: 20px;
 }
 
-.hamburger {
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+       
+    }
+
+    .logo {
+        font-size: 50px; /* Smaller font size for mobile */
+        padding-left: 0;
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: white; /* Slight background on nav-links to make it readable */
+        position: absolute;
+        top: 100%; /* Position it right below the logo/menu button */
+        left: 0;
+        z-index: 101;
+        font-size: 15px;
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
+    }
+
+    .search-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%; /* Full-width on smaller screens */
+        font-size: 16px;
+    }
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
     display: none;
-    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
     cursor: pointer;
+    color: #8E7653;
 }
 
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 4px 0;
+/* Show toggle button on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 10px; /* Adjust this value as needed */
+    }
+
+    .navbar {
+        position: relative;
+    }
 }
 
 /* .grad{
@@ -139,4 +198,66 @@ body {
     font-family: "Jacques Francois", serif;
     font-size: 23px;
     text-align: center;
+}
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .grad-image {
+        flex-direction: column; /* Stack images vertically on tablets */
+        padding: 0 40px;  /* Add more space on left and right */
+    }
+
+    .grad1, .grad2 {
+        width: 90%;  /* Make images more flexible */
+        height: auto;  /* Allow images to scale based on width */
+    }
+
+    .grad1 img, .grad2 img {
+        width: 100%;  /* Ensure images fill container */
+        height: auto;  /* Maintain aspect ratio */
+        padding: 20px;
+    }
+
+    .grad-text {
+        padding: 20px;
+        font-size: 20px;  /* Reduce text size on smaller screens */
+    }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .grad {
+        flex-direction: column;  /* Stack content vertically */
+        padding: 20px 20px;
+    }
+
+    .grad-image {
+        padding: 0 0px;  /* Ensure space on left and right */
+    }
+
+    .grad1, .grad2 {
+        width: 100%;  /* Make images take full width */
+        height: auto;  /* Allow images to scale */
+        margin-bottom: 20px;  /* Space between images */
+        margin-right: 20px;
+    }
+
+    .grad1 img, .grad2 img {
+        width: 400px;  /* Ensure images fill the container */
+        height: 450px;  /* Maintain aspect ratio */
+        padding-right: 20px;
+    }
+
+    .grad-text {
+        padding: 10px;
+        font-size: 18px;  /* Reduce text size further on mobile */
+    }
+}
+
+/* Responsive design for small mobile screens */
+@media (max-width: 480px) {
+    .grad-text {
+        font-size: 16px;  /* Even smaller text size */
+        padding: 10px;
+    }
 }
