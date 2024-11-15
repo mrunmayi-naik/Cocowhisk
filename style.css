@@ -40,6 +40,10 @@ body {
     font-size: 20px;
 }
 
+.nav-links li a:hover {
+    color: #952929;  /* Change color on hover */
+}
+
 .search-container {
     display: flex;
     align-items: center;
