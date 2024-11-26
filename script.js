@@ -5,27 +5,6 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// const slider = document.querySelector('.reviews-slider');
-// let scrollAmount = 0;
-// let scrollMax = slider.scrollWidth - slider.clientWidth; // Maximum scrollable width
-
-// function autoSlide() {
-//   // Scroll 300px to the right every 2 seconds
-//   scrollAmount += 300;
-  
-//   // If the scroll reaches the end, reset to the beginning
-//   if (scrollAmount >= scrollMax) {
-//     scrollAmount = 0;
-//   }
-  
-//   slider.scrollTo({
-//     left: scrollAmount,
-//     behavior: 'smooth'
-//   });
-// }
-
-// Auto slide every 2 seconds
-// setInterval(autoSlide, 2000);
 
 
 
@@ -49,3 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleMenu() {
   document.querySelector('.navbar').classList.toggle('active');
 }
+
+
+// // Show the search input when the search icon is clicked
+// function toggleSearchInput() {
+//     const searchInput = document.querySelector('.search-input');
+//     searchInput.style.display = searchInput.style.display === 'block' ? 'none' : 'block';
+// }
+
+// // Event listener for the search icon click
+// document.querySelector('.search-button').addEventListener('click', toggleSearchInput);

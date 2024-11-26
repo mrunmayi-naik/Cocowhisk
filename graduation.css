@@ -11,10 +11,11 @@ body {
     align-items: center;
     padding: 10px 20px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .logo {
-    color: #8E7653;
+    color: #952929;
     font-size: 70px;
     font-family: "Imperial Script", cursive;
     padding-left: 20px;
@@ -24,13 +25,13 @@ body {
 
 /* Add hover effect for the logo */
 .logo:hover {
-    color: #952929;  /* Change color on hover */
+    color: #8E7653;  /* Change color on hover */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-links li a {
@@ -38,6 +39,10 @@ body {
     text-decoration: none;
     font-family: "Jacques Francois", serif;
     font-size: 20px;
+}
+
+.nav-links li a:hover {
+    color: #952929;  /* Change color on hover */
 }
 
 .search-container {
@@ -71,6 +76,7 @@ body {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 10px; /* Ensure padding is consistent and prevent layout shift */
        
     }
 
@@ -90,6 +96,8 @@ body {
         left: 0;
         z-index: 101;
         font-size: 15px;
+        margin-top: 0; /* Remove any top margin that could cause a gap */
+        padding: 10px 10px 20px 50px; /* Remove any padding that may cause unwanted space */
     }
 
     .navbar.active .nav-links {
@@ -259,5 +267,116 @@ body {
     .grad-text {
         font-size: 16px;  /* Even smaller text size */
         padding: 10px;
+    }
+}
+
+
+/* Section styling */
+.youmightalsolike-section {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+/* Title styling */
+.youmightalsolike-title {
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: #8E7653;
+    font-family: "Imperial Script", cursive;
+}
+
+/* Container for the reviews and arrows */
+.reviews-container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    position: relative;
+    overflow: hidden; /* Ensure that the slider hides overflowing content */
+}
+
+/* Reviews section with scrollable functionality */
+.reviews-slider {
+    display: flex;
+    overflow-x: scroll; /* Horizontal scroll */
+    scroll-behavior: smooth;
+    padding: 20px;
+    justify-content: flex-start; /* Align the images to the left */
+    flex-grow: 1;
+    width: 100%; /* Ensures that it uses full width of the parent container */
+    box-sizing: border-box; /* Prevents any overflow due to padding */
+}
+
+.reviews-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+
+/* Styling for individual review cards */
+.review-card {
+    flex-shrink: 0;
+    margin-right: 30px; /* Adds space between the images */
+}
+
+.review-card img {
+    width: 270px;
+    height: 350px;
+    border-radius: 150px;
+    padding: 20px;
+    object-fit: cover;
+}
+
+/* Styling for the arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #8E7653;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 1024px) {
+    .review-card img {
+        width: 220px;  /* Make the images smaller */
+        height: 280px;
+    }
+    .review-card {
+        margin-right: 20px; /* Decrease the gap further on small screens */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .youmightalsolike-title{
+        font-size: 45px;
+    }
+    .review-card img {
+        width: 150px; /* Make the images even smaller */
+        height: 200px;
+    }
+    .review-card {
+        margin-right: 0px; /* Decrease the gap further on small screens */
+    }
+
+    .slider-arrow {
+        font-size: 1.5rem; /* Smaller arrows on mobile */
+        padding: 8px;
     }
 }

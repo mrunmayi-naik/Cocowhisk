@@ -11,10 +11,11 @@ body {
     align-items: center;
     padding: 10px 20px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .logo {
-    color: #8E7653;
+    color: #952929;
     font-size: 70px;
     font-family: "Imperial Script", cursive;
     padding-left: 20px;
@@ -24,13 +25,13 @@ body {
 
 /* Add hover effect for the logo */
 .logo:hover {
-    color: #952929;  /* Change color on hover */
+    color: #8E7653;  /* Change color on hover */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-links li a {
@@ -75,6 +76,7 @@ body {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 10px; /* Ensure padding is consistent and prevent layout shift */
        
     }
 
@@ -94,6 +96,8 @@ body {
         left: 0;
         z-index: 101;
         font-size: 15px;
+        margin-top: 0; /* Remove any top margin that could cause a gap */
+        padding: 10px 10px 20px 50px; /* Remove any padding that may cause unwanted space */
     }
 
     .navbar.active .nav-links {
@@ -135,7 +139,6 @@ body {
         position: relative;
     }
 }
-
 
 
 

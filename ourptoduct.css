@@ -141,165 +141,119 @@ body {
 }
 
 
-.our-story{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 40px 0 0;
+/* Container holding all the boxes */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 80px;
+    margin: auto;
+    padding: 50px 100px;
+    background-color: #e1c396;
+    margin-top: 35px;
+    width: 70%;
+}
+
+/* Box container styling */
+.box {
     margin-top: 30px;
-  
-}
-
-.story-text {
-   /* Allow text to take available space */
-    margin-left: 50px; /* Space between text and image */
-    padding: 40px 40px 40px 50px;
     text-align: center;
-    color: #fff;
-    background:#952929;
+    overflow: visible;
+    border-radius: 100px;
+    background: #871b1b;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    position: relative; /* Required for positioning the ribbon */
 }
 
-.story-text h1{
+.box:hover {
+    transform: translateY(-10px);
+}
+
+/* Container for image and ribbon */
+.emg{
+    position: relative; /* Set position relative for absolute positioning of the ribbon */
+}
+
+/* Styling for the ribbon image */
+.box .ribbon {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 100px; /* Control the size */
+    max-width: 100px; /* Ensure it doesn't exceed this size */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Ensure it's on top of other elements */
+}
+
+
+/* Styling for images inside the box */
+.box img {
+    max-width: 100%;
+    width: 250px;
+    height: 270px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.box img:hover {
+    transform: scale(1.2);
+}
+
+/* Styling for product title */
+.product-title {
+    font-size: 30px;
+    font-weight: normal;
+    color: #ffffff;
     font-family: "Imperial Script", cursive;
-    font-size: 65px;
-    font-weight: 100;
+    margin: 10px 10px;
 }
 
-.story-text p{
-    font-family: "Jacques Francois", serif;
-    font-size: 23px;
-    margin-bottom: 50px;
-}
+/* Responsive adjustments */
 
-.story-image{
-    width: 1500px;
-    height: 700px;
-    overflow: hidden;
-    /* padding: 100px 0 100px 0; */
-}
-
-.our-story:hover .story-image{
-    animation:  fadeIn 2s;
-}
-@keyframes fadeIn { 
-    from { 
-      opacity: 0; 
-    } 
-   
-    to { 
-      opacity: 1; 
-    } 
-} 
-
-.our-ethos{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 0 0 40px;
-    margin-top: 30px;
-}
-
-.ethos-text{
-    margin-right: 50px; /* Space between text and image */
-    padding: 40px 40px 40px 50px;
-    text-align: center;
-    color: #fff;
-    background:#952929;
-}
-
-.ethos-text h1{
-    font-family: "Imperial Script", cursive;
-    font-size: 65px;
-    font-weight: 100;
-}
-
-.ethos-text p{
-    font-family: "Jacques Francois", serif;
-    font-size: 23px;
-    margin-bottom: 50px;
-}
-
-.ethos-image{
-    width: 1800px;
-    height: 700px;
-    overflow: hidden;
-   
-}
-
-.our-ethos:hover .ethos-image{
-    animation:  fadeIn 2s;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
-    .story-text h1, .ethos-text h1 {
-        font-size: 50px;
+/* Medium screens (992px and below) */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 30px;
     }
 
-    .story-text p, .ethos-text p {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-
-    .story-image, .ethos-image {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .our-story, .our-ethos {
-        padding: 0 20px;
-    }
-
-    .story-text, .ethos-text {
-        padding: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .story-text h1, .ethos-text h1 {
-        font-size: 40px;
-    }
-
-    .story-text p, .ethos-text p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-
-    .our-story, .our-ethos {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .story-image, .ethos-image {
+    .box img {
         width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
-
-    .story-text, .ethos-text {
-        margin-left: 0;
-        margin-right: 0;
+        height: 250px;
     }
 }
 
+/* Small screens (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        gap: 20px 20px;
+        margin-top: 0;
+    }
+
+    .box img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .product-title {
+        font-size: 28px;
+    }
+}
+
+/* Very small screens (480px and below) */
 @media (max-width: 480px) {
-    .story-text h1, .ethos-text h1 {
-        font-size: 30px;
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px 15px;
     }
 
-    .story-text p, .ethos-text p {
-        font-size: 14px;
-        margin-bottom: 15px;
+    .box img {
+        width: 100%;
+        height: 200px;
     }
 
-    .our-story, .our-ethos {
-        padding: 0 10px;
-    }
-
-    .story-text, .ethos-text {
-        padding: 15px;
+    .product-title {
+        font-size: 24px;
     }
 }

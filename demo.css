@@ -1,0 +1,160 @@
+/* General styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #8E7653;
+    font-size: 70px;
+    font-family: "Imperial Script", cursive;
+    padding-left: 20px;
+    flex-grow: 1;
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #952929;  /* Change color on hover */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #8E7653;
+    text-decoration: none;
+    font-family: "Jacques Francois", serif;
+    font-size: 20px;
+}
+
+.nav-links li a:hover {
+    color: #952929;  /* Change color on hover */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Search input styles */
+.search-input {
+    display: none; /* Hide search input on small screens by default */
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    width: 200px; /* Adjust width as needed */
+}
+
+/* Search button styles */
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Search icon styles */
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none; /* Hide menu toggle by default */
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #8E7653;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Ensure the navbar is in a row layout */
+        align-items: center; /* Center the items vertically */
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 50px; /* Smaller font size for mobile */
+        padding-left: 0;
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: white; /* Slight background on nav-links to make it readable */
+        position: absolute;
+        top: 100%; /* Position it right below the logo/menu button */
+        left: 0;
+        z-index: 101;
+        font-size: 15px;
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
+    }
+
+    /* Search icon and toggle button container */
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align search icon to the left */
+        position: relative;
+        margin-right: 20px; /* Added margin to create space from the edge */
+    }
+
+    .search-input {
+        display: none; /* Hide the search input on small screens */
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Apply margin between the search icon and the menu toggle button */
+    .search-icon {
+        margin-right: 15px; /* Explicit margin to create space */
+    }
+
+    .search-button {
+        margin-left: 10px; /* Space between the search icon and the menu toggle */
+    }
+
+    /* Menu toggle on small screens */
+    .menu-toggle {
+        display: block; /* Show menu toggle only on small screens */
+        background-color: transparent;
+        border: none;
+        font-size: 35px;
+        cursor: pointer;
+        color: #8E7653;
+        position: absolute;
+        right: 10px; /* Position the menu toggle to the right */
+        z-index: 102; /* Ensure the toggle button stays above other elements */
+    }
+}
+
+/* Hide menu toggle on large screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button on large screens */
+    }
+    
+    /* Show search input on large screens */
+    .search-input {
+        display: block; /* Always display the search input on large screens */
+    }
+}

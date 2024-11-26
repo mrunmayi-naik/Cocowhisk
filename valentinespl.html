@@ -15,7 +15,7 @@
         <ul class="nav-links">
             <li><a href="ourstory.html">ABOUT</a></li>
             <li><a href="gifting.html">GIFTING</a></li>
-            <li><a href="#services">OUR PRODUCT</a></li>
+            <li><a href="ourproduct.html">OUR PRODUCT</a></li>
         </ul>
         <div class="search-container">
             <button class="search-button">
@@ -48,6 +48,39 @@
         </div>
     </div>
 
+    <div class="youmightalsolike-section">
+        <h2 class="youmightalsolike-title">You might also Like</h2>
+    
+        <!-- Reviews section with sliding functionality -->
+        <div class="reviews-container">
+            <!-- Left Arrow -->
+            <div class="slider-arrow left-arrow">&#8592;</div>
+    
+            <!-- Reviews slider with images -->
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <img src="images/057a4318-21ef-4b9d-b590-d9ba063bf265.jpg" alt="Review Image 1">
+                </div>
+                <div class="review-card">
+                    <img src="images/fbe86eda-ebc1-41a9-9dbf-92690b805fea.jpg" alt="Review Image 2">
+                </div>
+                <div class="review-card">
+                    <img src="images/download (1).jpg" alt="Review Image 3">
+                </div>
+                <div class="review-card">
+                    <img src="images/c453d754-b30b-4c12-8d55-97e25776726f.jpg" alt="Review Image 4">
+                </div>
+                <div class="review-card">
+                    <img src="images/The Best Chocolate Dessert In Every State.jpg" alt="Review Image 5">
+                </div>
+            </div>
+    
+            <!-- Right Arrow -->
+            <div class="slider-arrow right-arrow">&#8594;</div>
+        </div>
+    </div>
+     
+
     <footer> 
         <hr> 
         <div class="footer-content">  
@@ -72,6 +105,71 @@
             <p>Design By Mrunmayi</p>
          </div>
      </footer>
+
+     <script>
+        
+        const slider = document.querySelector('.reviews-slider');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+        let scrollAmount = 0;
+        const slideAmount = 300; // Number of pixels to scroll per action
+
+        function updateScrollMax() {
+            return slider.scrollWidth - slider.clientWidth;
+        }
+
+        // Function to auto-slide every few seconds
+        function autoSlide() {
+            scrollAmount += slideAmount;
+
+            // Recalculate scrollMax for responsive behavior
+            const scrollMax = updateScrollMax();
+
+            if (scrollAmount >= scrollMax) {
+                scrollAmount = 0;
+            }
+
+            slider.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Manual left and right arrow controls
+        leftArrow.addEventListener('click', () => {
+            scrollAmount -= slideAmount;
+            if (scrollAmount < 0) {
+                scrollAmount = updateScrollMax(); // Go back to the end if at the start
+            }
+            slider.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        rightArrow.addEventListener('click', () => {
+            scrollAmount += slideAmount;
+            const scrollMax = updateScrollMax();
+
+            if (scrollAmount >= scrollMax) {
+                scrollAmount = 0; // Go back to the beginning if at the end
+            }
+
+            slider.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Auto slide every 2 seconds
+        setInterval(autoSlide, 2000);
+
+        // Update scrollMax when the window resizes
+        window.addEventListener('resize', () => {
+            scrollAmount = 0; // Reset to beginning on resize
+            slider.scrollTo({ left: scrollAmount });
+        });
+     </script>
      <script src="script.js"></script>
 </body>
 </html>

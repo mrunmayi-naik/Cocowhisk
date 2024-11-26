@@ -30,10 +30,15 @@ footer {
     font-family: "Imperial Script", cursive;
     font-size: 80px; 
     font-weight: 100; 
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     margin-right: 60px;  
-    color: #8E7653;
+    color: #952929;
 }  
+
+.footer-content p:hover{
+    color: #8E7653;
+}
+
     
 .footer-content ul {  
     list-style: none;  
@@ -50,15 +55,19 @@ footer {
    margin: 25px 20px 25px 20px;
    
 }  
+
+.footer-content a:hover{
+    color: #952929;
+}
     
 .footer-content a {  
     color: #8E7653;  
     text-decoration: none;  
 }  
-    
+/*     
 .footer-content a:hover {  
-    color: #cccccc; /* Light gray text color on hover */  
-}  
+    color: #cccccc; /* Light gray text color on hover *
+}   */
     
 .social-media {  
     margin-top: 20px;  
@@ -68,6 +77,7 @@ footer {
 .social-media h1{
     color: #8E7653;
 }
+
 .social-media a {  
     margin: 10px; 
    
