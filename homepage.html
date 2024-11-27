@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" type="image/x-icon" href="images/logo2.png">
     <title>Cocoa whisk</title>
 </head>
@@ -18,11 +18,53 @@
             <li><a href="gifting.html">GIFTING</a></li>
             <li><a href="ourproduct.html">OUR PRODUCT</a></li>
         </ul>
-        <div class="search-container">
+        <!-- <div class="search-container">
             <button class="search-button">
                 <img src="images/magnifying-glass.png" alt="Search" class="search-icon">
             </button>
-            <input type="text" placeholder="SEARCH" class="search-input">
+            <input type="text" placeholder="SEARCH" class="search-input" id="search-input" onkeyup="searchProducts()">
+        </div> -->
+        <!-- <section class="search-container">
+            <form>
+                <button class="search-button">
+                    <img src="images/magnifying-glass.png" alt="Search" class="search-icon">
+                </button>
+                <input type="text" placeholder="SEARCH" class="search-input" id="search-input" onkeyup="searchProducts()">
+            </form>
+        
+            <div class="searchpro">
+                <div class="searchlist">
+                    <img src="images/product1.jpg">
+                    <div class="prdetails">
+                        <h1>Scarlet Bite</h1>
+                    </div>
+                </div>
+                <div class="searchlist">
+                    <img src="images/product2.jpg">
+                    <div class="prdetails">
+                        <h1> Bite</h1>
+                    </div>
+                </div>
+                <div class="searchlist">
+                    <img src="images/product1.jpg">
+                    <div class="prdetails">
+                        <h1>Scarlet Bite</h1>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <div class="search-container">
+            <form>
+                <div class="search-box">
+                    <img src="images/magnifying-glass.png" alt="Search Icon" class="search-icon">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search Products" onkeyup="searchProducts()" autocomplete="off">
+                    <img src="images/clear-icon.png" alt="Clear Icon" class="clear-icon" id="clear-icon" onclick="clearSearch()">
+                </div>
+            </form>
+        </div>
+        <div id="product-list" class="product-list">
+            <!-- Dynamically generated product cards will appear here -->
         </div>
     </nav>
     
@@ -40,30 +82,43 @@
 
     <div class="title">NEW CREATIONS</div>
         <div class="container">
+            <a href="product1.html">
+                <div class="box">
+                    <img src="images/greenribbon2.png" class="ribbon">
+                    <img src="images/product1.jpg" alt="Image 1">
+                </div>
+            </a>
+            <a href="product2.html">
+                <div class="box">
+                    <img src="images/greenribbon2.png" class="ribbon">
+                    <img src="images/product2.jpg" alt="Image 2">
+                </div>
+            </a>
+            <a href="product8.html">
+                <div class="box">
+                    <img src="images/jinglecap.png" class="jinglecap1">
+                    <img src="images/product8.jpg" alt="Image 3">
+                </div>
+            </a>
+            <a href="product3.html">
+                <div class="box">
+                    <img src="images/jinglecap.png" class="jinglecap">
+                    <img src="images/product3.jpg" alt="Image 4">
+                </div>
+            </a>
+            <a href="product9.html">
+                <div class="box">
+                    <img src="images/jinglecap.png" class="jinglecap2">
+                    <img src="images/product10.jpg" alt="Image 5">
+                </div>
+            </a>
+           <a href="product4.html">
             <div class="box">
                 <img src="images/greenribbon2.png" class="ribbon">
-                <img src="images/c453d754-b30b-4c12-8d55-97e25776726f.jpg" alt="Image 1">
+                <img src="images/product4.jpg" alt="Image 6">
             </div>
-            <div class="box">
-                <img src="images/greenribbon2.png" class="ribbon">
-                <img src="images/download (1).jpg" alt="Image 2">
-            </div>
-            <div class="box">
-                <img src="images/jinglecap.png" class="jinglecap1">
-                <img src="images/Photography for French Broad Chocolates.jpg" alt="Image 3">
-            </div>
-            <div class="box">
-                <img src="images/jinglecap.png" class="jinglecap">
-                <img src="images/fbe86eda-ebc1-41a9-9dbf-92690b805fea.jpg" alt="Image 4">
-            </div>
-            <div class="box">
-                <img src="images/jinglecap.png" class="jinglecap2">
-                <img src="images/Tart Cherry Fondant Creams _ Love and Olive Oil.jpg" alt="Image 5">
-            </div>
-            <div class="box">
-                <img src="images/greenribbon2.png" class="ribbon">
-                <img src="images/CASTLE 101 CHOCOLATE ⚜️.jpg" alt="Image 6">
-            </div>
+           </a>
+            
         </div>
     </div>
         
@@ -213,9 +268,10 @@
                         slider.scrollTo({ left: scrollAmount });
                     });
 
+                  
          </script>
    
-
+    <script src="app.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

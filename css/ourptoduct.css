@@ -163,6 +163,7 @@ body {
     transition: transform 0.3s ease-in-out;
     border: 2px solid #ddd;
     position: relative; /* Required for positioning the ribbon */
+   
 }
 
 
@@ -201,6 +202,9 @@ body {
     transform: scale(1.2);
 }
 
+.box a{
+    text-decoration: none;
+}
 /* Styling for product title */
 .product-title {
     font-size: 30px;
@@ -208,6 +212,7 @@ body {
     color: #ffffff;
     font-family: "Imperial Script", cursive;
     margin: 10px 10px;
+    text-decoration: none;
 }
 
 /* Responsive adjustments */

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/valentinespl.css">
+    <title>products1</title>
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/product.css">
     <link rel="icon" type="image/x-icon" href="images/logo2.png">
-    <title>Valentinespecial</title>
 </head>
 <body>
     <nav class="navbar">
@@ -24,76 +24,63 @@
             <input type="text" placeholder="SEARCH" class="search-input">
         </div>
     </nav>
-    
-    <div class="xoxo">
-        <img src="images/22 Valentine's Day Decorating Ideas That Deserve All the Xs and Os.jpg" alt="special" class="xoxo-image">
-    </div>
 
-    <div class="special1">
-        <div class="vibrant-text">
-            <h1>Vibrant Love Bites</h1>
-            <p>
-                Packaged elegantly, they make an ideal gift for your special someone. Perfect for a romantic gesture, these chocolates promise to enchant and delight
-                , making every occasion extraordinary.
-            </p>
-        </div>
-        <img src="images/product7.jpg" class="vibrant-image">
-    </div>
+   <div class="product1">
+     <div class="productpop">
+            <h1>Eclipse Truffles</h1>
+            <p>Eclipse Truffles are a luxurious, dark chocolate indulgence designed to captivate your taste buds. These truffles are filled with silky ganache, creating a perfect contrast of rich cocoa and delicate sweetness.
+                 Their deep, mysterious flavor makes them the ultimate treat for chocolate connoisseurs.</p>
+     </div>
+     <img src="images/product6.jpg">
+   </div>
+    
 
-    <div class="special2">
-        <img src="images/pinterest_com_@Unforgiven_442.jpg" class="vibrantinfo-image">
-        <div class="vibrantinfo-text">
-           <p>
-            Celebrate Valentine's Day with these exquisite chocolates, bursting with vibrant flavors and a touch of romance. Each piece is a perfect blend of creamy chocolate and a luscious red filling, crafted to delight your senses. Handcrafted with the finest ingredients, these chocolates are designed to melt in your mouth, releasing waves of rich cocoa and fruity sweetness that linger with every bite. Elegantly packaged and adorned with a touch of flair, they make for the perfect gift to show someone special how much they mean to you. Whether you're sharing them with a loved one or indulging in a well-deserved treat for yourself, each chocolate promises a moment of pure bliss.  where every piece is crafted with care, dedication, and a sprinkle of magic to make your Valentine’s Day truly unforgettable.</p>
-        </div>
-    </div>
+   <div class="youmightalsolike-section">
+    <h2 class="youmightalsolike-title">You might also Like</h2>
 
-    <div class="youmightalsolike-section">
-        <h2 class="youmightalsolike-title">You might also Like</h2>
-    
-        <!-- Reviews section with sliding functionality -->
-        <div class="reviews-container">
-            <!-- Left Arrow -->
-            <div class="slider-arrow left-arrow">&#8592;</div>
-    
-            <!-- Reviews slider with images -->
-            <div class="reviews-slider">
-                <a href="prdouct6.html">
-                    <div class="review-card">
-                        <img src="images/product6.jpg" alt="Review Image 1">
-                    </div>
-                </a>
-                <a href="product8.html">
-                    <div class="review-card">
-                        <img src="images/product9.jpg" alt="Review Image 2">
-                    </div>
-                </a>
-                
-                <a href="product2.html">
-                    <div class="review-card">
-                        <img src="images/product2.jpg" alt="Review Image 3">
-                    </div>
-                </a>
-                
-                <a href="product1.html">
-                    <div class="review-card">
-                        <img src="images/product1.jpg" alt="Review Image 4">
-                    </div>
-                </a>
-                
-                <a href="product4.html">
-                    <div class="review-card">
-                        <img src="images/product4.jpg" alt="Review Image 5">
-                    </div>
-                </a>
-               
-            </div>
-    
-            <!-- Right Arrow -->
-            <div class="slider-arrow right-arrow">&#8594;</div>
+    <!-- Reviews section with sliding functionality -->
+    <div class="reviews-container">
+        <!-- Left Arrow -->
+        <div class="slider-arrow left-arrow">&#8592;</div>
+
+        <!-- Reviews slider with images -->
+        <div class="reviews-slider">
+            <a href="prdouct6.html">
+                <div class="review-card">
+                    <img src="images/product6.jpg" alt="Review Image 1">
+                </div>
+            </a>
+            <a href="product8.html">
+                <div class="review-card">
+                    <img src="images/product9.jpg" alt="Review Image 2">
+                </div>
+            </a>
+            
+            <a href="product2.html">
+                <div class="review-card">
+                    <img src="images/product2.jpg" alt="Review Image 3">
+                </div>
+            </a>
+            
+            <a href="product1.html">
+                <div class="review-card">
+                    <img src="images/product1.jpg" alt="Review Image 4">
+                </div>
+            </a>
+            
+            <a href="product4.html">
+                <div class="review-card">
+                    <img src="images/product4.jpg" alt="Review Image 5">
+                </div>
+            </a>
+           
         </div>
+
+        <!-- Right Arrow -->
+        <div class="slider-arrow right-arrow">&#8594;</div>
     </div>
-     
+</div>
+ 
 
     <footer> 
         <hr> 
@@ -119,9 +106,7 @@
             <p>Design By Mrunmayi</p>
          </div>
      </footer>
-
-     <script>
-        
+    <script>
         const slider = document.querySelector('.reviews-slider');
         const leftArrow = document.querySelector('.left-arrow');
         const rightArrow = document.querySelector('.right-arrow');
@@ -183,7 +168,7 @@
             scrollAmount = 0; // Reset to beginning on resize
             slider.scrollTo({ left: scrollAmount });
         });
-     </script>
+    </script>
      <script src="script.js"></script>
 </body>
 </html>

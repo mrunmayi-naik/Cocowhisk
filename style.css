@@ -44,7 +44,7 @@ body {
 .nav-links li a:hover {
     color: #952929;  /* Change color on hover */
 }
-
+/* 
 .search-container {
     display: flex;
     align-items: center;
@@ -69,7 +69,123 @@ body {
 .search-icon {
     width: 20px;
     height: 20px;
+} */
+
+
+
+/* General container for the search box */
+.search-container {
+    text-align: center; /* Keeps search box centered */
+    margin-left: 20px;
+    position: relative; /* Ensure the search box and product list are within the container */
 }
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Search input field styling */
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 40px;
+    font-size: 16px;
+    border-radius: 24px;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Search icon inside the search box */
+.search-icon {
+    position: absolute;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Clear icon (for clearing the search input) */
+.clear-icon {
+    position: absolute;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Product list, hidden initially, will appear when typing */
+.product-list {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Make the product list vertical */
+    align-items: center;
+    margin-top: 10px; /* Added margin to space it below the input */
+    z-index: 100;
+    position: absolute;
+    top: 100%; /* Position it just below the search input */
+    left: 50%; /* Align the product list to the center horizontally */
+    transform: translateX(-50%); /* Center the product list */
+    background: #0f0f0f; /* Ensure background is white */
+    overflow-y: auto;
+    max-height: 400px; /* Limit the height of the product list */
+    width: 40%;
+    border: 1px solid #ddd; /* Border for the product list */
+    border-radius: 50px;
+}
+
+/* Scrollbar styling */
+.product-list::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Product card styling */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on product card */
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image inside the card */
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+/* Product name styling */
+.product-card h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Message when no products are found */
+.no-products {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    color: #666;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -147,7 +263,7 @@ body {
     display: flex;
     padding-top: 30px;
     position: relative;
-    z-index: 100;
+    z-index: 1;
     justify-content: center; /* Center elements horizontally */
     gap: 20px; /* Space between image and text */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
@@ -409,6 +525,7 @@ body {
 .special-offer-link{
     text-decoration: none;
 }
+
 .background-image {
     background-image: url('images/Premium Photo _ A close up of a chocolate colored cloth with a very smooth surface generative ai_enhanced.jpg');
     background-size: cover; /* Cover the entire div */
@@ -419,6 +536,7 @@ body {
     align-items: center;
     justify-content: center; /* Center content */
     position: relative;
+    z-index: -1;
     
 }
 
@@ -909,4 +1027,4 @@ body {
       line-height: 1.5; /* Adds space between lines for readability */
     }
   }
-  
+

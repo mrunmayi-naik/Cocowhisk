@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Jacques+Francois&display=swap');
+body {
+    margin: 0;
+}
+
+/* General styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    color: #952929;
+    font-size: 70px;
+    font-family: "Imperial Script", cursive;
+    padding-left: 20px;
+    flex-grow: 1;
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Add hover effect for the logo */
+.logo:hover {
+    color: #8E7653;  /* Change color on hover */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #8E7653;
+    text-decoration: none;
+    font-family: "Jacques Francois", serif;
+    font-size: 20px;
+}
+
+.nav-links li a:hover {
+    color: #952929;  /* Change color on hover */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    width: 150px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px; /* Ensure padding is consistent and prevent layout shift */
+       
+    }
+
+    .logo {
+        font-size: 50px; /* Smaller font size for mobile */
+        padding-left: 0;
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: white; /* Slight background on nav-links to make it readable */
+        position: absolute;
+        top: 100%; /* Position it right below the logo/menu button */
+        left: 0;
+        z-index: 101;
+        font-size: 15px;
+        margin-top: 0; /* Remove any top margin that could cause a gap */
+        padding: 10px 10px 20px 50px; /* Remove any padding that may cause unwanted space */
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
+    }
+
+    .search-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%; /* Full-width on smaller screens */
+        font-size: 16px;
+    }
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #8E7653;
+}
+
+/* Show toggle button on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 10px; /* Adjust this value as needed */
+    }
+
+    .navbar {
+        position: relative;
+    }
+}
+
+.product1{
+    background: #952929;
+    display: flex;
+    padding: 90px 130px;
+    margin-top: 20px;
+}
+
+.product1 img{
+    width: 430px;
+    height: 500px;
+    max-height: 100%;
+    object-fit: cover;
+}
+.productpop{
+    background-color: rgba(206, 90, 90, 0.655);
+    padding: 50px 50px;
+    color: #ffff;
+    align-items: left;
+}
+
+.productpop h1{
+    font-family: "Imperial Script", cursive; 
+    font-size: 70px;
+    padding-left: 200px;
+    font-weight: normal;
+}
+
+.productpop p{
+    font-family: "Jacques Francois", serif;
+    font-size: 25px;
+}
+
+/* .lamb {
+    width: 400px;
+    max-height: 500px;
+} */
+
+
+@media (max-width: 480px) {
+    .product1{
+        padding: 30px 50px;
+        flex-direction: column;
+    }
+
+    .productpop h1{
+       padding: 10px 20px;
+       margin-bottom: 0;
+       margin-top: 0;
+       font-size: 40px;
+    }
+
+    .productpop p{
+        padding: 10px 30px;
+        align-items: center;
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .productpop{
+        padding: 10px;
+        align-items: center;
+    }
+
+    .product1 img {
+        width: 290px;
+        height: 250px ;
+    }
+}
+
+
+
+
+
+/* Section styling */
+.youmightalsolike-section {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+/* Title styling */
+.youmightalsolike-title {
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: #8E7653;
+    font-family: "Imperial Script", cursive;
+}
+
+/* Container for the reviews and arrows */
+.reviews-container {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    position: relative;
+    overflow: hidden; /* Ensure that the slider hides overflowing content */
+}
+
+/* Reviews section with scrollable functionality */
+.reviews-slider {
+    display: flex;
+    overflow-x: scroll; /* Horizontal scroll */
+    scroll-behavior: smooth;
+    padding: 20px;
+    justify-content: flex-start; /* Align the images to the left */
+    flex-grow: 1;
+    width: 100%; /* Ensures that it uses full width of the parent container */
+    box-sizing: border-box; /* Prevents any overflow due to padding */
+}
+
+.reviews-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+
+/* Styling for individual review cards */
+.review-card {
+    flex-shrink: 0;
+    margin-right: 30px; /* Adds space between the images */
+}
+
+.review-card img {
+    width: 270px;
+    height: 350px;
+    border-radius: 150px;
+    padding: 20px;
+    object-fit: cover;
+}
+
+/* Styling for the arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #8E7653;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 1024px) {
+    .review-card img {
+        width: 220px;  /* Make the images smaller */
+        height: 280px;
+    }
+    .review-card {
+        margin-right: 20px; /* Decrease the gap further on small screens */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .youmightalsolike-title{
+        font-size: 45px;
+    }
+    .review-card img {
+        width: 150px; /* Make the images even smaller */
+        height: 200px;
+    }
+    .review-card {
+        margin-right: 0px; /* Decrease the gap further on small screens */
+    }
+
+    .slider-arrow {
+        font-size: 1.5rem; /* Smaller arrows on mobile */
+        padding: 8px;
+    }
+}

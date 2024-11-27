@@ -38,3 +38,6 @@ function toggleMenu() {
 
 // // Event listener for the search icon click
 // document.querySelector('.search-button').addEventListener('click', toggleSearchInput);
+
+
+
