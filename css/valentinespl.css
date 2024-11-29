@@ -46,7 +46,7 @@ body {
 .nav-links li a:hover {
     color: #952929;  /* Change color on hover */
 }
-
+/* 
 .search-container {
     display: flex;
     align-items: center;
@@ -71,7 +71,133 @@ body {
 .search-icon {
     width: 20px;
     height: 20px;
+} */
+
+
+
+/* General container for the search box */
+.search-container {
+    text-align: center; /* Keeps search box centered */
+    margin-left: 20px;
+    position: relative; /* Ensure the search box and product list are within the container */
 }
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Search input field styling */
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 40px;
+    font-size: 16px;
+    border-radius: 24px;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    color: #952929;
+    outline: none;
+    font-family: "Jacques Francois", serif;
+}
+
+/* Search icon inside the search box */
+.search-icon {
+    position: absolute;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Clear icon (for clearing the search input) */
+.clear-icon {
+    position: absolute;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Product list, hidden initially, will appear when typing */
+.product-list {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Make the product list vertical */
+    align-items: center;
+    margin-top: 10px; /* Added margin to space it below the input */
+    z-index: 100;
+    position: absolute;
+    top: 100%; /* Position it just below the search input */
+    left: 50%; /* Align the product list to the center horizontally */
+    transform: translateX(-50%); /* Center the product list */
+    background: #fcfbfb; /* Ensure background is white */
+    overflow-y: auto;
+    max-height: 400px; /* Limit the height of the product list */
+    width: 40%;
+    border: 1px solid #ddd; /* Border for the product list */
+    border-radius: 30px;
+}
+
+/* Scrollbar styling */
+.product-list::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Product card styling */
+.product-card {
+    background-color: #fff;
+    border-radius: 30px;
+    width: 100%;
+    /* max-width: 300px; */
+    font-family: "Jacques Francois", serif;
+    text-align: center; 
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on product card */
+
+
+/* Product image inside the card */
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+/* Product name styling */
+.product-card h3 {
+    margin: 5px;
+    color: #8E7653;
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.product-card a{
+    text-decoration: none;
+}
+
+/* Message when no products are found */
+.no-products {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold; /* Increased font weight */
+    color: #8E7653;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px; /* Add padding at the top for spacing */
+    padding-bottom: 10px; /* Add padding at the bottom for spacing */
+    margin: 5px;
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -117,6 +243,10 @@ body {
         width: 100%; /* Full-width on smaller screens */
         font-size: 16px;
     }
+
+    .product-list{
+        width: 100%;
+    }
 }
 
 /* Mobile Menu Toggle Button */
@@ -141,6 +271,7 @@ body {
         position: relative;
     }
 }
+
 
 
 .xoxo {

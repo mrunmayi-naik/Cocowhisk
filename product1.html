@@ -17,12 +17,20 @@
             <li><a href="gifting.html">GIFTING</a></li>
             <li><a href="ourproduct.html">OUR PRODUCT</a></li>
         </ul>
+
         <div class="search-container">
-            <button class="search-button">
-                <img src="images/magnifying-glass.png" alt="Search" class="search-icon">
-            </button>
-            <input type="text" placeholder="SEARCH" class="search-input">
+            <form>
+                <div class="search-box">
+                    <img src="images/magnifying-glass.png" alt="Search Icon" class="search-icon">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search Products" onkeyup="searchProducts()" autocomplete="off">
+                    <img src="images/star.png" alt="Clear Icon" class="clear-icon" id="clear-icon" onclick="clearSearch()">
+                </div>
+            </form>
         </div>
+       <!-- This is where the dynamically generated products will be shown -->
+            <div id="product-list" class="product-list" style="display: none;">
+                <!-- Dynamically generated product cards will appear here -->
+            </div>
     </nav>
 
    <div class="product1">
@@ -172,6 +180,7 @@
             slider.scrollTo({ left: scrollAmount });
         });
      </script>
+     <script src="app.js"></script>
      <script src="script.js"></script>
 </body>
 </html>

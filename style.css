@@ -99,7 +99,9 @@ body {
     border-radius: 24px;
     border: 1px solid #dcdcdc;
     background-color: #fff;
+    color: #952929;
     outline: none;
+    font-family: "Jacques Francois", serif;
 }
 
 /* Search icon inside the search box */
@@ -114,8 +116,8 @@ body {
 .clear-icon {
     position: absolute;
     right: 15px;
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     display: none;
 }
@@ -131,12 +133,12 @@ body {
     top: 100%; /* Position it just below the search input */
     left: 50%; /* Align the product list to the center horizontally */
     transform: translateX(-50%); /* Center the product list */
-    background: #0f0f0f; /* Ensure background is white */
+    background: #fcfbfb; /* Ensure background is white */
     overflow-y: auto;
     max-height: 400px; /* Limit the height of the product list */
     width: 40%;
     border: 1px solid #ddd; /* Border for the product list */
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 /* Scrollbar styling */
@@ -147,21 +149,16 @@ body {
 /* Product card styling */
 .product-card {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 50px;
+    border-radius: 30px;
     width: 100%;
-    max-width: 400px;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* max-width: 300px; */
+    font-family: "Jacques Francois", serif;
+    text-align: center; 
     transition: all 0.3s ease;
 }
 
 /* Hover effect on product card */
-.product-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 /* Product image inside the card */
 .product-card img {
@@ -174,17 +171,30 @@ body {
 
 /* Product name styling */
 .product-card h3 {
-    font-size: 16px;
-    color: #333;
+    margin: 5px;
+    color: #8E7653;
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.product-card a{
+    text-decoration: none;
 }
 
 /* Message when no products are found */
 .no-products {
-    text-align: center;
     width: 100%;
-    font-size: 18px;
-    color: #666;
+    font-size: 20px;
+    font-weight: bold; /* Increased font weight */
+    color: #8E7653;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px; /* Add padding at the top for spacing */
+    padding-bottom: 10px; /* Add padding at the bottom for spacing */
+    margin: 5px;
 }
+
 
 
 /* Responsive Styles */
@@ -230,6 +240,10 @@ body {
     .search-input {
         width: 100%; /* Full-width on smaller screens */
         font-size: 16px;
+    }
+
+    .product-list{
+        width: 100%;
     }
 }
 
