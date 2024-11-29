@@ -95,7 +95,7 @@ body {
 .search-input {
     width: 100%;
     padding: 12px 40px 12px 40px;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 24px;
     border: 1px solid #dcdcdc;
     background-color: #fff;
@@ -189,7 +189,7 @@ body {
     font-weight: bold; /* Increased font weight */
     color: #8E7653;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 30px;
     padding-top: 10px; /* Add padding at the top for spacing */
     padding-bottom: 10px; /* Add padding at the bottom for spacing */
     margin: 5px;
